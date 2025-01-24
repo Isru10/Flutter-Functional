@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // main body
     return Scaffold(
       appBar: appBar(),
       backgroundColor: Colors.white,
@@ -14,6 +15,8 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+// search field
 
   Container _searchField() {
     return Container(
@@ -61,6 +64,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
+// the app bar
   AppBar appBar() {
     return AppBar(
       title: const Text(
