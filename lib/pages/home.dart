@@ -65,36 +65,41 @@ class _HomePageState extends State<HomePage> {
                 height: 15,
               ),
               Container(
-                color: Colors.blue,
+                color: Colors.green[200],
                 height: 240,
                 child: ListView.separated(
-                    itemBuilder: (context, index) {
-                      return Container(
-                        width: 210,
-                        decoration: BoxDecoration(
-                            color: diets[index].boxColor,
-                            borderRadius: BorderRadius.circular(20)
-                            ),
-                            child: Column(
-                              children: [
-                                SvgPicture.asset(diets[index].iconPath),
-                                Text(diets[index].name,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,
-                                      fontSize: 18
-                                    ))
-                              ],
-                            ),
-                      );
-                    },
-                    separatorBuilder: (context, index) => SizedBox(
-                          width: 25,
-                        ),
-                    itemCount: diets.length,
-                    scrollDirection: Axis.horizontal,
-                    padding: EdgeInsets.only(left: 20,right: 20),
-                    ),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 210,
+                      decoration: BoxDecoration(
+                          color: diets[index].boxColor,
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        children: [
+                          SvgPicture.asset(diets[index].iconPath),
+                          Text(diets[index].name,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                  fontSize: 18)),
+                          Text(
+                            diets[index].level +
+                                ' | ' +
+                                diets[index].duration +
+                                ' | ' +
+                                diets[index].calorie,
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                  separatorBuilder: (context, index) => SizedBox(
+                    width: 25,
+                  ),
+                  itemCount: diets.length,
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                ),
               ),
             ],
           ),
