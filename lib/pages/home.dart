@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 40,
           ),
+          // this is category 
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
